@@ -31,6 +31,7 @@ public class ResultPage {
 	}
 	
 	public void clickOnTheFirstElement() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement anElement = (new WebDriverWait(driver,5)).until(ExpectedConditions.elementToBeClickable(firstItem));
 		anElement.click();
 		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
