@@ -15,9 +15,9 @@ public class ResultPage {
 	
 	private WebDriver driver;
 	private By sortBy = By.name("searchSortBy");
-	
-	@FindBy(className="item-img")
-	WebElement firstItem;
+	private By firstItem = By.className("item-img");
+	//@FindBy(className="item-img")
+	//WebElement firstItem;
 	
 	public ResultPage(WebDriver driver) {
 		this.driver = driver;
@@ -31,11 +31,9 @@ public class ResultPage {
 	}
 	
 	public void clickOnTheFirstElement() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement anElement = (new WebDriverWait(driver,5)).until(ExpectedConditions.elementToBeClickable(firstItem));
 		anElement.click();
-		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		//firstItem.click();
 	}
 	
 	public void verifySearch(String sortOrderBy) {

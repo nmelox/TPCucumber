@@ -1,6 +1,6 @@
 Feature: Trabajo Practico Final Curso Automation II.
 
-Scenario Outline: Search Book
+Scenario Outline: Search a Book
 
 Given I enter a <searchword>
 When I press Search button 
