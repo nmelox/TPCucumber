@@ -43,6 +43,6 @@ private MailSender mail;
 		scenario.write("--------------------------------------------------------------");
 		this.context.getDriver().close();
 		this.context.getDriver().quit();
-		//mail.sendMail();
+		mail.sendMail();
 	}
 }
