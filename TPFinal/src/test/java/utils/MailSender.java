@@ -15,6 +15,7 @@ import javax.mail.internet.MimeMultipart;
 public class MailSender {
 	
 	public void sendMail() {
+		System.out.println("Entre al MailSender.");
 		Properties props = new Properties();
         props.setProperty("mail.smtp.host", "smtp.outlook.com");
         props.setProperty("mail.smtp.starttls.enable", "true");
@@ -23,8 +24,10 @@ public class MailSender {
         props.setProperty("mail.user", "melonahuel@hotmail.com");
         props.setProperty("mail.password", "Spiderman2013");
         props.setProperty("mail.smtp.auth", "true");
+        System.out.println("Configure las properties.");
         Session session = Session.getInstance(props, null);
         session.setDebug(true);
+        System.out.println("Inicie la sesion.");
         MimeMessage message = new MimeMessage(session);
         ZipFiler zipFile = new ZipFiler();
         try {
@@ -50,10 +53,10 @@ public class MailSender {
 			t.close();
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.getMessage();
 		} catch (MessagingException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.getMessage();
 		} 
         
 	}

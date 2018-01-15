@@ -13,7 +13,7 @@ public class ZipFiler {
 	
 	private List <String> fileList;
     private static final String OUTPUT_ZIP_FILE = "DescriptionBook.zip";
-    private static final String SOURCE_FOLDER = "C:\\CursoAutomation\\TPCucumber\\TPFinal\\target\\site\\cucumber-pretty"; // SourceFolder path
+    private static final String SOURCE_FOLDER = "C:\\CursoAutomation\\TPCucumber\\TPFinal\\target\\site"; // SourceFolder path
 
     public ZipFiler() {
         fileList = new ArrayList < String > ();

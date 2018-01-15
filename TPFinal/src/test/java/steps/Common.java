@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utils.MailSender;
+import utils.ZipFiler;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -43,6 +44,9 @@ private MailSender mail;
 		scenario.write("--------------------------------------------------------------");
 		this.context.getDriver().close();
 		this.context.getDriver().quit();
-		mail.sendMail();
+		//Estas lineas se agregaron para que zipeen el reporte,estan dentro del paso de enviar el mail pero el mismo falla. 
+		ZipFiler zipFile = new ZipFiler();
+		zipFile.zipFile();
+		//mail.sendMail();
 	}
 }
